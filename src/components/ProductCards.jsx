@@ -20,13 +20,13 @@ const navigate = useNavigate()
     //console.log(obj)
     return (
         <>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-4 ">
            {
             products.map(product => ( <Card key={product.product_id} product={product}></Card>
 
             ))} 
         </div>
-        <button className="btn btn-warning" onClick={() => navigate('/product')}>View All</button>
+        <button className="btn btn-outline btn-warning  mt-6 w-28" onClick={() => navigate('/product')}>View All</button>
         </>
     );
 };
