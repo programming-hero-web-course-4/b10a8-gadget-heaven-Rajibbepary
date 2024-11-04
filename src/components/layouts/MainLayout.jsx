@@ -11,7 +11,7 @@ const MainLayout = () => {
             <Navbar></Navbar>
             {/* Banner */}
             
-            <div className='min-h-[calc(100vh-440px)] py-20'>
+            <div className='min-h-[calc(100vh-440px)] py-20 container mx-auto px-12'>
                 <Outlet></Outlet>
             </div>
             {/* footer */}
