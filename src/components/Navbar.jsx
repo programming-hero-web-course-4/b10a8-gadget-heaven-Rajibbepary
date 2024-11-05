@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -23,10 +23,10 @@ const Navbar = () => {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 py-4 shadow">
-              <Link to='/'>Home</Link>
-              <Link to='/statistics'>Statistics</Link>
-              <Link to='/product'>Product</Link>
-            <Link to='/dashboard'>Dashboard</Link>
+              <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to='/'>Home</NavLink>
+              <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to='/statistics'>Statistics</NavLink>
+              <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to='/product'>Product</NavLink>
+            <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning' : 'hover:text-warning'}`} to='/dashboard'>Dashboard</NavLink>
              
               
             </ul>
@@ -35,20 +35,20 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-8 font-semibold text-base ">
-          <Link to='/'>Home</Link>
-          <Link to='/statistics'>Statistics</Link>
-          <Link to='/product'>Product</Link>
-          <Link to='/dashboard'>Dashboard</Link>
+          <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning border-b-2 border-warning duration-700' : 'hover:text-warning'}`} to='/'>Home</NavLink>
+              <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning border-b-2 border-warning duration-700' : 'hover:text-warning'}`} to='/statistics'>Statistics</NavLink>
+              <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning border-b-2 border-warning duration-700' : 'hover:text-warning'}`} to='/product'>Product</NavLink>
+            <NavLink className={({isActive}) => `font-bold ${isActive ? 'text-warning border-b-2 border-warning duration-700' : 'hover:text-warning'}`} to='/dashboard'>Dashboard</NavLink>
              
                
           </ul>
         </div>
-        <div className="navbar-end flex gap-6 items-center">
-         <div className='border p-2 border-black rounded-full'>
-         <i className="fa-solid fa-cart-flatbed "></i>
+        <div className="navbar-end flex gap-5 items-center">
+         <div className='border p-2 border-gray-500 rounded-full w-10 h-10'>
+         <i className="fa-solid fa-cart-flatbed  "></i>
          </div>
-         <div  className='border border-black p-2 rounded-full'>
-         <i className="fa-regular fa-heart "></i>
+         <div  className='border border-gray-500 p-2 rounded-full  w-10 h-10 '>
+         <i className="fa-regular fa-heart ml-1 "></i>
          </div>
         </div>
       </div>

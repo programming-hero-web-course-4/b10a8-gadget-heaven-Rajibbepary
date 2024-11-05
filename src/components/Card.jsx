@@ -5,8 +5,8 @@ const Card = ({product}) => {
     return (
         
         <div className="card bg-base-100 border mt-7 p-4 ">
-        <figure  className="bg-white ">
-          <img className="object-cover w-60 h-60"
+        <figure  className="w-full h-48 overflow-hidden ">
+          <img className=" h-full mb-2 object-cover"
             src={product_image} 
             alt="Product" />
         </figure>
@@ -14,7 +14,7 @@ const Card = ({product}) => {
           <h2 className="card-title">{product_title}</h2>
           <p>Price: {price} tk</p>
           <div className="card-actions ">
-            <button className="btn btn-outline btn-success">View Details</button>
+            <button className="btn btn-outline btn-success rounded-3xl">View Details</button>
           </div>
         </div>
       </div>
