@@ -6,6 +6,7 @@ import Statistics from "../pages/Statistics";
 import Dashboard from "../pages/Dashboard";
 import ProductCards from "../ProductCards";
 import Product from "../pages/Product";
+import ProductDetails from "../pages/ProductDetails";
 
 
 const routes = createBrowserRouter([
@@ -43,6 +44,11 @@ const routes = createBrowserRouter([
           {
             path:'/dashboard', 
             element:<Dashboard></Dashboard>
+          },
+          {
+            path:'/product/:id',
+            element:<ProductDetails></ProductDetails>,
+            loader:() =>fetch('../product.json'),
           }
     ]
   }
