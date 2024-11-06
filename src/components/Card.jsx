@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link,  } from "react-router-dom";
 
 
 const Card = ({product}) => {
+
     const {product_title, product_image, price, product_id} = product || {}
     return (
         

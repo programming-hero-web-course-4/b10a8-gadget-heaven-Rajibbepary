@@ -7,9 +7,11 @@ import Dashboard from "../pages/Dashboard";
 import ProductCards from "../ProductCards";
 import Product from "../pages/Product";
 import ProductDetails from "../pages/ProductDetails";
+import { useState } from "react";
 
 
 const routes = createBrowserRouter([
+  
   {
     path:'/',
     element:<MainLayout></MainLayout>,
@@ -42,9 +44,15 @@ const routes = createBrowserRouter([
             element:<Product></Product>,
             loader:() =>fetch('../product.json'),
           },
-          {
+          // {
+          //   path:'/dashboard/:id', 
+          //   element:<Dashboard></Dashboard>,
+          //   loader:() =>fetch('../product.json'),
+          // },
+
+           {
             path:'/dashboard', 
-            element:<Dashboard></Dashboard>
+            element:<Dashboard></Dashboard>,
           },
           {
             path:'/product/:id',

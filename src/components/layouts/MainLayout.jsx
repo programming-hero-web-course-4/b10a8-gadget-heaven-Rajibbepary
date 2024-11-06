@@ -3,10 +3,13 @@ import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { Outlet } from 'react-router-dom';
+import  { Toaster } from 'react-hot-toast';
+
 
 const MainLayout = () => {
     return (
         <div>
+             <Toaster />
             {/* Nanbar */}
             <Navbar></Navbar>
             {/* Banner */}
